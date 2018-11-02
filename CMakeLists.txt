@@ -12,12 +12,13 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++11 -DBOOST_LOG_DYN_LINK")
 
 add_executable(${PROJECT_NAME}  ./src/main.cpp
                                 ./src/controller/controller.cpp
-                                ./src/controller/example_controller.cpp)
+                                ./src/controller/example_controller.cpp
+                                ./src/util/network_utils.cpp)
 
 # header locations
-set(CPPRESTSDK_INCLUDE_DIR "/usr/include")
+set(UTILITIES_INCLUDE_DIR "./src/util")
 set(CONTROLLER_INCLUDE_DIR "./src/controller")
-set(HEADER_PATHS ${CPPRESTSDK_INCLUDE_DIR} ${CONTROLLER_INCLUDE_DIR} ${Boost_INCLUDE_DIR} ${OPENSSL_INCLUDE_DIR})
+set(HEADER_PATHS ${UTILITIES_INCLUDE_DIR} ${CONTROLLER_INCLUDE_DIR} ${Boost_INCLUDE_DIR} ${OPENSSL_INCLUDE_DIR})
 
 # library paths
 set(OPENSSL_LIBS "${OPENSSL_LIBRARIES}")
