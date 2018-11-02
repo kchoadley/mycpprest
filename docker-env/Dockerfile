@@ -13,6 +13,7 @@ RUN apt-get -qq -d update
 RUN apt-get -qq -y install \
     cmake \
     cppcheck \
+    curl \
     g++-6 \
     git \
     libasio-dev \

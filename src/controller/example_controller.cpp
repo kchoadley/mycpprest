@@ -3,7 +3,6 @@
 #include <cpprest/uri_builder.h>
 #include <cpprest/base_uri.h>
 
-
 namespace aoi_rest {
 void ExampleController::InitHandlers() {
     listener__.support(methods::GET, std::bind(&ExampleController::HandleGet, this, std::placeholders::_1));
